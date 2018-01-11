@@ -1,100 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Blue Frontiers Assignment</title>
-    <!-- bootstrap -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- require stylsheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  </head>
-
-  <body id="page-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Blue Frontiers Assignment</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <!-- button click initiates modal sign in pop-up -->
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"> Sign In
-            </button>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-            <!-- modal functionality -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                      <form class="form-signin">
-                            <label for="inputEmail" class="sr-only">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                            <br>
-                            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                      </form>        
-                    </div>
-                  </div>
-                </div>
-              </div>
-          
-          <!-- welcome page -->
-    <section id="welcome-page">
-      <div class="container text-center">
-        <div class="row">
-         <div class="col-lg-12">
-          <div>
-            <h1 id="welcome"></h1>
-            <button class="translate" id="us">english?</button><button class="translate" id='fr'>french?
-            </button>
-          </div>
-        </div>
-      </div>
+<html lang="en-us">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans+Condensed:300" rel="stylesheet">
+<!-- require css from css folder -->
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="lang-wrap">
+  <p class="translate" id="us">en</p><span>&nbsp;|&nbsp;<span><p class="translate" id='fr'>fr</p>
+</div>
+<section id="top">
+  <div class="top-content">
+    <div class="top-image">
+      <img src="assets/images/islands0.png">
     </div>
-  </section>
-     
-     <!-- Bitcoin and visualization section -->
-    <section id="btc">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-3">
-            <h2>Current BTC Price</h2>
-            <div class="btcwdgt-price"></div>            
-          </div>
-          <div class="col-lg-9">
-            <!-- embedded from Data Studio -->
-            <iframe width="900" height="675" src="https://datastudio.google.com/embed/reporting/1v0xOhNvx-5dtI0BcgvXA6UhdGekR1PNY/page/Gg3" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
+    <div class="top-wrapper">
+      <h1 id="header"></h1>
+      <button class="accounts login" id="login">login</button><button class="accounts signup" id="signup">signup</button>
+    </div>
+    <div class="login-wrap hide">
+      <h1 class="login">login</h1>
+      <p class="remove">x</p>
+      <form>
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <button class="submit">submit</button>
+      </form>
+    </div>
+    <div class="signup-wrap hide">
+      <h1 class="signup">signup</h1>
+      <p class="remove">x</p>
+      <form>
+        <div class="together">
+          <input type="text" name="name" placeholder="first name">
+          <input type="email" name="email" placeholder="email">
         </div>
-      </div>
-    </section>
+        <div>        
+          <input type="password" name="password" placeholder="password">
+          <input type="password" name="confirmPassword" placeholder="confirm password">
+        </div>
+        <button class="submit">submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<section id="thr">
+<div class="row">
+  <div class="col-md-5 col-sm-12 a">
+    <h3 id="date">date</h3>
+    <h3 id="time">time</h3>
+  </div>
+  <div class="col-md-2 col-sm-12 b"></div>
+  <div class="col-md-5 col-sm-12 c"><div><h4 id="usd"></h4><span>(EUR BASE)</span>
+  <br>
+  <h4 class="arrow">&nbsp;&darr;&nbsp;</h4>
+  <br>
+  <h4 id="bUsd"></h4></div>
+  <hr>
+    <div><h4 id="eur"></h4><span>(USD BASE)</span>
+    <br>
+    <h4 class="arrow">&nbsp;&darr;&nbsp;</h4>
+    <br>
+    <h4 id="bEur"></h4></div></div>
+</div>
+</section>
+<br>
+<section>
+  <!-- google analytics embedded from data studios -->
+  <div>
+      <iframe src="https://datastudio.google.com/embed/reporting/1v0xOhNvx-5dtI0BcgvXA6UhdGekR1PNY/page/Gg3" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</section>
 
-    <footer class="py-5 bg-dark">
+<footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">&copy; Hire Mike Murphy as your Web Developer</p>
       </div>
     </footer>
-    <!-- bootstrap template jquery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-   <!--  require javascript app -->
-    <script src="js/app.js"></script>
-   
-  </body>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <!-- require javascript from folder -->
+  <script src="js/app.js"></script>
+</body>
 </html>
