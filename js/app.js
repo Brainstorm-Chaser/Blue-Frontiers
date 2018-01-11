@@ -53,7 +53,7 @@ $('.remove').click(function(){
   $( document ).ready(function() {
     if (sessionStorage.getItem("perfLang") === null) {
       $.ajax({
-        url: 'http://freegeoip.net/json/',
+        url: 'https://freegeoip.net/json/',
         type: 'GET',
         dataType: 'jsonp',
         success: function(location) {
@@ -131,7 +131,7 @@ $('.remove').click(function(){
     //get results from blockchain api and render Bitcoin ticker to screen using JQuery
   function showbitCoin(){
     $.ajax({
-      url: 'http://blockchain.info/ticker',
+      url: 'https://blockchain.info/ticker',
       type: 'GET',
       dataType: 'json',
       success: function(tickers) {
