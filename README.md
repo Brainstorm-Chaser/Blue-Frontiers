@@ -1,4 +1,6 @@
-https://brainstorm-chaser.github.io/Blue-Frontiers/
+
+
+<a href="https://brainstorm-chaser.github.io/Blue-Frontiers/" target="_blank">Website Application</a>
 
 This web application was created for Blue Frontiers and has the following capabilities:
   <ul>
