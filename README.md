@@ -1,6 +1,6 @@
 https://brainstorm-chaser.github.io/Blue-Frontiers/
 
-This web application was created for Blue Frontiers. It has the following capabilities:
+This web application was created for Blue Frontiers and has the following capabilities:
   <ul>
     <li>automatically detect visitor's location and display a welcome message in their language.</li>
     <li>Language-switching between French and English.</li>
